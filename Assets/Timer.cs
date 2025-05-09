@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 using TMPro;
+using System;
 public class Timer : MonoBehaviour
 {
     [SerializeField] GameObject TimesUpScreen;
-    [SerializeField] TextMeshProUGUI timeText;
+    [SerializeField] TextMeshProUGUI timeText; 
     [SerializeField] float duration, currentTime;
+    internal static Timer instance;
 
     void Start()
     {
@@ -34,4 +36,8 @@ public class Timer : MonoBehaviour
         TimesUpScreen.SetActive(true);
     }
 
+    internal void BeginTime()
+    {
+        throw new NotImplementedException();
+    }
 }
